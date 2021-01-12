@@ -1,19 +1,22 @@
 document.getElementById("fizzButton").addEventListener("click", function () {
-    let num1 = document.getElementById("input1").value;
-    let num2 = document.getElementById("input2").value;
-
-    runTheNumber(num1, num2);
+    fbSolution();
 });
 
-function runTheNumber (num1, num2) {
-    for (let loop = num1; loop <= num2; loop++) {
-        document.getElementById("results").innerText += loop;
+function fbSolution () {
+    let num1 = document.getElementById("input1").value;
+    let num2 = document.getElementById("input2").value;
+    let num3 = [];
+    for (let loop = 1; loop <= 100; loop++) {
+        if (loop % num1 == 0 && loop % num2 == 0 ) {
+            num3.push(" FizzBuzz");
+        }else if (loop % num1 == 0) {
+            num3.push(" Fizz");
+        }else if (loop % num2 == 0 ) {
+            num3.push(" Buzz");
+        }else {
+            num3.push(" " + loop);
+        }
+         document.getElementById("results").innerText = num3.join(",");
     }
+       
 }
-
-//The premise of fizzbuzz is to take 2 user inputs and fina all of their mulitples between 1 and 100 
-//If the loop count is multiple of input 1 it is a fizz case 
-//If the loop count is multiple of input 2 it is a buzz case 
-//If the loop count is a multiple of both input it is a fizzbuzz case 
-//The order you test is MIGHT be very important 
-
