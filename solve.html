@@ -40,15 +40,22 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col form-group">
-                <input type="number" class="form-control" id="input1" placeholder="Enter a number"/>
+                <input type="number" class="form-control" id="input1" value="1" placeholder="Enter a number"/>
             </div>
             <div class="col form-group">
-                <input id="input2" class="form-control" value="5"/>
+                <input id="input2" class="form-control" value="10"/>
             </div>
         </div>
         <div class="row">
             <div class="col-6 offset-3 form-group">
-                <button class="btn btn-outline-danger btnWide">Click Me</button>
+                <button id="fizzButton" class="btn btn-outline-danger btnWide">Click Me</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-6">
+                <p>I will show results</p>
+                <hr>
+                <p id="results"></p>
             </div>
         </div>
     </div>
